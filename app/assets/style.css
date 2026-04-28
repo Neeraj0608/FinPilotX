@@ -1,0 +1,48 @@
+/* FinPilot X Premium Dark Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Outfit', sans-serif;
+}
+
+.stApp {
+    background: radial-gradient(circle at top right, #1E2130, #0E1117);
+}
+
+/* Sidebar Styling */
+section[data-testid="stSidebar"] {
+    background-color: rgba(30, 33, 48, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* Metric Cards */
+[data-testid="stMetricValue"] {
+    color: #00FFA3 !important;
+}
+
+/* Custom Containers */
+.css-1r6slb0 { /* This is a common streamlit div class, might need update */
+    background-color: #1E2130;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Success/Warning/Error Colors */
+.stAlert {
+    border-radius: 10px;
+}
+
+/* Buttons */
+.stButton > button {
+    border: none;
+    background: linear-gradient(90deg, #00FFA3, #00CC82);
+    color: #0E1117;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 163, 0.4);
+}

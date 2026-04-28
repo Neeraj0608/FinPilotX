@@ -1,0 +1,21 @@
+services:
+  finpilotx:
+    build: .
+    container_name: finpilotx-app
+    command: >
+      streamlit run app/main.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.enableCORS=false
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+      - db_data:/app/data/db
+    environment:
+      - ALPHA_VANTAGE_API_KEY=${ALPHA_VANTAGE_API_KEY:-demo}
+    restart: unless-stopped
+
+volumes:
+  db_data:
+    driver: local
